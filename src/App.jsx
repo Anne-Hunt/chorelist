@@ -6,10 +6,10 @@ function App() {
 
 
   return (
-    <main>
+    <>
       <ChoreInput />
       <ChoreList />
-    </main>
+    </>
   )
 }
 
