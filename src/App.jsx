@@ -7,9 +7,14 @@ function App() {
   const [chores, setChores] = useState(['pickup pharmacy order', 'get dog food', 'vet visit', 'wash car & vacuum'])
   const [choreData, setChoreData] = useState('')
 
+  function saveData(newChores) {
+    localStorage.setItem('chores', JSON.stringify({ chores: newChores }))
+  }
+
   function addChores(choreData) {
     const newChoreList = [...chores, choreData]
     setChores(newChoreList)
+    saveData(newChoreList)
   }
 
   function editChore(index) {
@@ -23,6 +28,7 @@ function App() {
       return choreIndex !== index
     })
     setChores(newChoreList)
+    saveData(newChoreList)
   }
 
   useEffect(() => {
@@ -34,7 +40,7 @@ function App() {
       return
     }
     localChores = JSON.parse(localChores).chores
-  }, [chores])
+  }, [])
 
   return (
     <>
