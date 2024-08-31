@@ -5,6 +5,7 @@ import ChoreList from './components/chorelist.jsx'
 function App() {
 
   const [chores, setChores] = useState(['pickup pharmacy order', 'get dog food', 'vet visit', 'wash car & vacuum'])
+  const [choreData, setChoreData] = useState('')
 
   function addChores(choreData) {
     const newChoreList = [...chores, choreData]
@@ -12,7 +13,9 @@ function App() {
   }
 
   function editChore(index) {
-    const newChoreList = [...chores]
+    const edited = chores[index]
+    setChoreData(edited)
+    removeChore(index)
   }
 
   function removeChore(index) {
@@ -24,8 +27,8 @@ function App() {
 
   return (
     <>
-      <ChoreInput addChores={addChores} />
-      <ChoreList removeChore={removeChore} chores={chores} />
+      <ChoreInput addChores={addChores} choreData={choreData} />
+      <ChoreList removeChore={removeChore} editChore={editChore} setChoreData={setChoreData} chores={chores} />
     </>
   )
 }

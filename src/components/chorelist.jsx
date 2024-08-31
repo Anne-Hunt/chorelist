@@ -9,7 +9,7 @@ export default function ChoreList(props) {
         <ul className="main">
             {chores.map((chore, choreIndex) => {
                 return (
-                    <ChoreCard {...props} key={choreIndex}>
+                    <ChoreCard {...props} key={choreIndex} index={choreIndex}>
                         <p>{chore}</p>
                     </ChoreCard>
                 )
