@@ -4,11 +4,12 @@ import ChoreCard from './ChoreCard.jsx'
 export default function ChoreList(props) {
     // let chores = ['pickup pharmacy order', 'get dog food', 'vet visit', 'wash car & vacuum']
     const { chores } = props
+
     return (
         <ul className="main">
             {chores.map((chore, choreIndex) => {
                 return (
-                    <ChoreCard key={choreIndex}>
+                    <ChoreCard {...props} key={choreIndex}>
                         <p>{chore}</p>
                     </ChoreCard>
                 )

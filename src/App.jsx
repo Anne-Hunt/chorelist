@@ -11,10 +11,21 @@ function App() {
     setChores(newChoreList)
   }
 
+  function editChore(index) {
+    const newChoreList = [...chores]
+  }
+
+  function removeChore(index) {
+    const newChoreList = chores.filter((chore, choreIndex) => {
+      return choreIndex !== index
+    })
+    setChores(newChoreList)
+  }
+
   return (
     <>
       <ChoreInput addChores={addChores} />
-      <ChoreList chores={chores} />
+      <ChoreList removeChore={removeChore} chores={chores} />
     </>
   )
 }

@@ -7,7 +7,7 @@ export default function ChoreInput(props) {
     return (
         <header>
             <input type="text" placeholder="Add Chore ..." value={choreData} onChange={(event) => { setChoreData(event.target.value) }} />
-            <button type="submit" onClick={() => { addChores(choreData) }}>Add</button>
+            <button type="submit" onClick={() => { addChores(choreData), setChoreData('') }}>Add</button>
         </header>
     )
 }
