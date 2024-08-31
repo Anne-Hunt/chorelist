@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playwrite CU', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,7 +11,7 @@ h2,
 h3,
 input,
 button {
-  font-family: 'Playwrite CU', system-ui;
+  font-family: 'Open Sans', system-ui;
 }
 
 #root {

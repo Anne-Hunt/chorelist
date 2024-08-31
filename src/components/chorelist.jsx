@@ -1,14 +1,16 @@
 import React from 'react'
+import ChoreCard from './ChoreCard.jsx'
 
-export default function ChoreList() {
-    let chores = ['pickup pharmacy order', 'get dog food', 'vet visit', 'wash car & vacuum']
+export default function ChoreList(props) {
+    // let chores = ['pickup pharmacy order', 'get dog food', 'vet visit', 'wash car & vacuum']
+    const { chores } = props
     return (
         <ul className="main">
             {chores.map((chore, choreIndex) => {
                 return (
-                    <li className='ChoreItem' key={choreIndex}>
-                        {chore/* <ChoreCard/> */}
-                    </li>
+                    <ChoreCard key={choreIndex}>
+                        <p>{chore}</p>
+                    </ChoreCard>
                 )
             })}
         </ul>

@@ -1,7 +1,14 @@
 import React from 'react'
 
-export default function ChoreCard() {
+export default function ChoreCard(props) {
+    const { children } = props
     return (
-        <div>ChoreCard</div>
+        <li className='choreItem'>
+            {children}
+            <div>
+                <i className="fa-solid fa-pen-fancy"></i>
+                <i className="fa-solid fa-trash-can"></i>
+            </div>
+        </li>
     )
 }
