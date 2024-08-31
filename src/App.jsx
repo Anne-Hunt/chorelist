@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ChoreInput from './components/choreinput.jsx'
 import ChoreList from './components/chorelist.jsx'
 
@@ -24,6 +24,17 @@ function App() {
     })
     setChores(newChoreList)
   }
+
+  useEffect(() => {
+    if (!localStorage) {
+      return
+    }
+    let localChores = localStorage.getItem('chores')
+    if (!localChores) {
+      return
+    }
+    localChores = JSON.parse(localChores).chores
+  }, [chores])
 
   return (
     <>
