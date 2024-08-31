@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function chorelist() {
+export default function ChoreList() {
     return (
-        <div>chorelist</div>
+        <div>ChoreList</div>
     )
 }
