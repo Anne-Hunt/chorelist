@@ -1,8 +1,3 @@
-# React + Vite
+# Chorelist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This basic app allows users to create and alter a list of chores using React, Javascript, Vite, local storage, Google Fonts, and Font Awesome. It's available for viewing on Netlify and will soon be altered to allow users to sign in and view their chores. Future versions would also allow chores to be assigned to related user accounts.
